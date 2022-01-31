@@ -16,6 +16,7 @@ after_success:
   # Login to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
+  # commiting again to trigger build
   - docker push abhi248/multi-client
   - docker push abhi248/multi-nginx
   - docker push abhi248/multi-server
